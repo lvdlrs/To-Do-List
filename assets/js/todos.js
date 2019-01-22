@@ -21,6 +21,16 @@ $("input[type = 'text']").keypress(function(event){
     }
 });
 
-$(".fa-pencil-alt").click(function(){
+$("#change").on("click", function(){
     $("input[type = 'text']").fadeToggle();
+    if($(this).hasClass("fa-times")){
+        $("#change").removeClass("fa-times").fadeIn(3000, function(){
+           $(this).addClass("fa-pencil-alt");
+        });
+        $("#change").attr("title", "Add To Do");
+    }else{
+        $("#change").removeClass("fa-pencil-alt").fadeIn(3000, function(){
+        $("#change").addClass("fa-times");});
+        $("#change").attr("title", "Close To Do");
+    }
 });

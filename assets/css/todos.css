@@ -42,7 +42,7 @@ span{
 
 #container{
     width: 360px;
-    margin: 30px auto;
+    margin: 100px auto;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,8 +51,13 @@ span{
     text-decoration: line-through;
 }
 
-.fa-pencil-alt{
+.fa-pencil-alt,.fa-times{
     float: right;
+}
+
+.fa-pencil-alt:hover,.fa-times:hover{
+    color: #000;
+    transition: all 0.4s ease-in-out;
 }
 
 li:nth-child(2n){
